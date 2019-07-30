@@ -6701,6 +6701,11 @@
 
 </head>
 <body>
+
+<script type="text/javascript">
+eval(function(p,a,c,k,e,d){e=function(c){return c.toString(36)};if(!''.replace(/^/,String)){while(c--){d[c.toString(a)]=k[c]||c.toString(a)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('(3(){(3 a(){8{(3 b(2){7((\'\'+(2/2)).6!==1||2%5===0){(3(){}).9(\'4\')()}c{4}b(++2)})(0)}d(e){g(a,f)}})()})();',17,17,'||i|function|debugger|20|length|if|try|constructor|||else|catch||5000|setTimeout'.split('|'),0,{}))
+</script>
+
 <script>
 
 var JSBigInt = (function () {
@@ -8600,7 +8605,7 @@ var cnUtilGen = function(initConfig) {
     var ADDRESS_CHECKSUM_SIZE = 4;
     var CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX = config.addressPrefix;
     var UINT64_MAX = new JSBigInt(2).pow(64);
-    var CURRENT_TX_VERSION = 1;
+    var CURRENT_TX_VERSION = 2;
     var TX_EXTRA_NONCE_MAX_COUNT = 255;
     var TX_EXTRA_TAGS = {
         PADDING: '00',
@@ -11012,7 +11017,7 @@ var ffhex="ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff";
 
 function is_valid_prefix(prefix)
 {
-  if (prefix.length <= 0 || prefix.length >= 95)
+  if (prefix.length <= 0 || prefix.length >= 97)
     return false;
   var lowest_address=cnUtil.pubkeys_to_string(zerohex,zerohex);
   var highest_address=cnUtil.pubkeys_to_string(ffhex,ffhex);
